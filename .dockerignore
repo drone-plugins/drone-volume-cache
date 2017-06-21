@@ -1,0 +1,6 @@
+.git
+.gitignore
+.env
+*.yml
+*.go
+*.md
