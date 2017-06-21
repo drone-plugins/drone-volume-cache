@@ -1,6 +1,6 @@
-# GOARCH=amd64 GOOS=linux CGO_ENABLED=0 go build -o drone-local-cache
-# docker build --rm -t plugins/local-cache .
+# GOARCH=amd64 GOOS=linux CGO_ENABLED=0 go build -o drone-volume-cache
+# docker build --rm -t plugins/volume-cache .
 FROM scratch
 
-ADD drone-local-cache /bin/
-ENTRYPOINT [ "/bin/drone-local-cache" ]
+ADD drone-volume-cache /bin/
+ENTRYPOINT [ "/bin/drone-volume-cache" ]

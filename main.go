@@ -133,16 +133,3 @@ func run(c *cli.Context) error {
 	}
 	return p.Exec()
 }
-
-var x = `
-pipeline:
-  cache:
-    image: plugins/local-cache
-    path: /cache
-    file: dev.tar.gz
-    fallback_to: master.tar.gz
-    restore: true
-    rebuild: false
-    flush: false
-    ttl: 30
-`

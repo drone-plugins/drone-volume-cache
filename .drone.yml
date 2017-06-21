@@ -1,6 +1,6 @@
 workspace:
   base: /go
-  path: src/github.com/drone/drone-local-cache
+  path: src/github.com/drone/drone-volume-cache
 
 pipeline:
   build:
@@ -11,10 +11,10 @@ pipeline:
       - GOARCH=amd64
     commands:
       - go test
-      - go build -o drone-local-cache
+      - go build -o drone-volume-cache
   publish:
     image: plugins/docker
-    repo: plugins/local-cache
+    repo: plugins/volume-cache
     tags: [ latest, 1.0.0, 1.0, 1 ]
     when:
       branch: master
