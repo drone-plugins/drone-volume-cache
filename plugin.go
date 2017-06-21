@@ -7,7 +7,6 @@ import (
 	"github.com/drone/drone-cache-lib/archive/tar"
 	"github.com/drone/drone-cache-lib/cache"
 	"github.com/drone/drone-cache-lib/storage"
-	"github.com/labstack/gommon/log"
 )
 
 type plugin struct {
@@ -49,7 +48,7 @@ func (p *plugin) Exec() error {
 	}
 
 	if p.flush && p.ttl > 0 {
-		log.Infof("Purging cached items older then %v", p.ttl)
+		logrus.Infof("Purging cached items older then %v", p.ttl)
 		flusher := cache.NewFlusher(p.storage, testExpired(p.ttl))
 		if ferr := flusher.Flush(p.path); ferr != nil {
 			logrus.Warnf("Error purging cache. %s", ferr)
