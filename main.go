@@ -108,7 +108,7 @@ func run(c *cli.Context) error {
 		rebuild:  c.Bool("rebuild"),
 		restore:  c.Bool("restore"),
 		flush:    c.Bool("flush"),
-		ttl:      time.Duration(c.Int("ttl")) * 24 * 30,
+		ttl:      time.Duration(c.Int("ttl")) * 24 * time.Hour,
 		storage:  &localCache{},
 	}
 	if p.file == "" {
