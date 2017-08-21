@@ -115,14 +115,14 @@ func run(c *cli.Context) error {
 		p.file = path.Join(
 			c.String("repo-owner"),
 			c.String("repo-name"),
-			c.String("repo-branch")+".tar",
+			c.String("commit-branch")+".tar",
 		)
 	}
 	if p.fallback == "" {
 		p.fallback = path.Join(
 			c.String("repo-owner"),
 			c.String("repo-name"),
-			c.String("repo-branch")+".tar",
+			c.String("commit-branch")+".tar",
 		)
 	}
 	if !path.IsAbs(p.file) {
