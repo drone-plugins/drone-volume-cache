@@ -60,9 +60,10 @@ func main() {
 			EnvVar: "PLUGIN_FLUSH",
 		},
 		cli.IntFlag{
-			Name:  "ttl",
-			Usage: "cache ttl in days",
-			Value: 30,
+			Name:   "ttl",
+			Usage:  "cache ttl in days",
+			Value:  30,
+			EnvVar: "PLUGIN_TTL",
 		},
 		cli.BoolFlag{
 			Name:   "debug",

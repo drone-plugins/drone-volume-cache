@@ -57,6 +57,7 @@ func (p *plugin) Exec() error {
 
 	return nil
 }
+
 // Check if older then x days (default 30 days)
 func testExpired(ttl time.Duration) cache.DirtyFunc {
 	return func(file storage.FileEntry) bool {
