@@ -1,6 +1,8 @@
 package main
 
 import (
+	"os"
+	"path/filepath"
 	"time"
 
 	"github.com/Sirupsen/logrus"
@@ -28,6 +30,9 @@ func (p *plugin) Exec() error {
 	cacher := cache.New(p.storage, encoder)
 
 	if p.rebuild {
+		dir, _ := filepath.Split(p.file)
+		os.MkdirAll(dir, 0700)
+
 		logrus.Infof("Rebuilding cache at %s", p.file)
 		if err := cacher.Rebuild(p.mount, p.file); err == nil {
 			logrus.Infof("Cache rebuilt")
