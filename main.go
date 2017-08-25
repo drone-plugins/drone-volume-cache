@@ -60,9 +60,10 @@ func main() {
 			EnvVar: "PLUGIN_FLUSH",
 		},
 		cli.IntFlag{
-			Name:  "ttl",
-			Usage: "cache ttl in days",
-			Value: 30,
+			Name:   "ttl",
+			Usage:  "cache ttl in days",
+			Value:  30,
+			EnvVar: "PLUGIN_TTL",
 		},
 		cli.BoolFlag{
 			Name:   "debug",
@@ -108,7 +109,7 @@ func run(c *cli.Context) error {
 		rebuild:  c.Bool("rebuild"),
 		restore:  c.Bool("restore"),
 		flush:    c.Bool("flush"),
-		ttl:      time.Duration(c.Int("ttl")) * 24 * 30,
+		ttl:      time.Duration(c.Int("ttl")) * 24 * time.Hour,
 		storage:  &localCache{},
 	}
 	if p.file == "" {
