@@ -1,0 +1,4 @@
+FROM scratch
+
+ADD release/linux/arm/drone-volume-cache /bin/
+ENTRYPOINT [ "/bin/drone-volume-cache" ]

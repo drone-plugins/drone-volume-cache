@@ -33,6 +33,12 @@
 			"revisionTime": "2017-02-08T21:15:27Z"
 		},
 		{
+			"checksumSHA1": "zqkSxLJGQ9yJjZ7P+sBNSSBjjfA=",
+			"path": "github.com/replicon/fast-archiver/falib",
+			"revision": "060bf9adec257eee0f3117452b5fdd6e450c535c",
+			"revisionTime": "2012-12-20T19:56:59Z"
+		},
+		{
 			"checksumSHA1": "NzXQ7CPXMn61y5ZpOux/UtBgd2g=",
 			"path": "github.com/urfave/cli",
 			"revision": "420da9fff3724cc19afe25bef61aeabd5b81e9f7",

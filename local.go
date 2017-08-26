@@ -36,7 +36,7 @@ func (s *localCache) List(path string) ([]storage.FileEntry, error) {
 	walker := func(path string, info os.FileInfo, err error) error {
 		if !info.IsDir() {
 			files = append(files, storage.FileEntry{
-				Path:         info.Name(),
+				Path:         path,
 				Size:         info.Size(),
 				LastModified: info.ModTime(),
 			})

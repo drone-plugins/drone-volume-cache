@@ -4,3 +4,5 @@
 *.yml
 *.go
 *.md
+*.sh
+LICENSE
