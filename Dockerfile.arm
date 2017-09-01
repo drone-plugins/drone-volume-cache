@@ -1,4 +1,4 @@
-FROM scratch
+FROM plugins/base:multiarch
 MAINTAINER Drone.IO Community <drone-dev@googlegroups.com>
 
 LABEL org.label-schema.version=latest
