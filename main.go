@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"os"
 	"path"
 	"time"
@@ -9,14 +10,14 @@ import (
 	"github.com/urfave/cli"
 )
 
-var version = "1.0.0" // build number set at compile-time
+var build = "0" // build number set at compile-time
 
 func main() {
 	app := cli.NewApp()
 	app.Name = "volume cache plugin"
-	app.Usage = "valume cache plugin"
+	app.Usage = "volume cache plugin"
 	app.Action = run
-	app.Version = version
+	app.Version = fmt.Sprintf("1.0.0+%s", build)
 	app.Flags = []cli.Flag{
 
 		//

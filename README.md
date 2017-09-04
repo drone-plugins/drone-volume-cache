@@ -1,7 +1,12 @@
 # drone-volume-cache
-[![Build Status](http://beta.drone.io/api/badges/drone-plugins/drone-volume-cache/status.svg)](http://beta.drone.io/api/badges/drone-plugins/drone-volume-cache)
 
-Drone plugin that allows you to `cache` directories within the build workspace. 
+[![Build Status](http://beta.drone.io/api/badges/drone-plugins/drone-volume-cache/status.svg)](http://beta.drone.io/drone-plugins/drone-volume-cache)
+[![Join the chat at https://gitter.im/drone/drone](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/drone/drone)
+[![Go Doc](https://godoc.org/github.com/drone-plugins/drone-volume-cache?status.svg)](http://godoc.org/github.com/drone-plugins/drone-volume-cache)
+[![Go Report](https://goreportcard.com/badge/github.com/drone-plugins/drone-volume-cache)](https://goreportcard.com/report/github.com/drone-plugins/drone-volume-cache)
+[![](https://images.microbadger.com/badges/image/plugins/volume-cache.svg)](https://microbadger.com/images/plugins/volume-cache "Get your own image badge on microbadger.com")
+
+Drone plugin that allows you to cache directories within the build workspace, this plugin is backed by Docker volumes. For the usage information and a listing of the available options please take a look at [the docs](http://plugins.drone.io/drone-plugins/drone-volume-cache/).
 
 ## Build
 
@@ -16,7 +21,7 @@ go build
 Build the Docker image with the following commands:
 
 ```
-GOARCH=amd64 GOOS=linux CGO_ENABLED=0 go build -o drone-volume-cache
+GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -a -tags netgo -o release/linux/amd64/drone-volume-cache
 docker build --rm -t plugins/volume-cache .
 ```
 
@@ -27,11 +32,12 @@ Execute from the working directory:
 ```
 docker run --rm \
   -e PLUGIN_FLUSH=true \
+  -e PLUGIN_TTL=1 \
   -v $(pwd):$(pwd) \
   -v /tmp/cache:/cache \
   -w $(pwd) \
-  plugins/volume-cache --ttl 1
-  
+  plugins/volume-cache
+
 docker run --rm \
   -e PLUGIN_RESTORE=true \
   -e PLUGIN_FILE="backup.tar" \
@@ -59,5 +65,5 @@ docker run --rm \
   -v $(pwd):$(pwd) \
   -v /tmp/cache:/cache \
   -w $(pwd) \
-  plugins/volume-cache 
+  plugins/volume-cache
 ```

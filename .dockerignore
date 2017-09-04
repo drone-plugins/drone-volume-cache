@@ -1,8 +1,2 @@
-.git
-.gitignore
-.env
-*.yml
-*.go
-*.md
-*.sh
-LICENSE
+*
+!release/
