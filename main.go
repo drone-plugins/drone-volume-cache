@@ -6,24 +6,22 @@ import (
 	"path"
 	"time"
 
-	"github.com/Sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 	"github.com/urfave/cli"
 )
 
-var build = "0" // build number set at compile-time
+var (
+	version = "0.0.0"
+	build   = "0"
+)
 
 func main() {
 	app := cli.NewApp()
 	app.Name = "volume cache plugin"
 	app.Usage = "volume cache plugin"
 	app.Action = run
-	app.Version = fmt.Sprintf("1.0.0+%s", build)
+	app.Version = fmt.Sprintf("%s+%s", version, build)
 	app.Flags = []cli.Flag{
-
-		//
-		// Cache information
-		//
-
 		cli.StringFlag{
 			Name:   "path",
 			Usage:  "path",
@@ -71,11 +69,6 @@ func main() {
 			Usage:  "debug plugin output",
 			EnvVar: "PLUGIN_DEBUG",
 		},
-
-		//
-		// Build information (for setting defaults)
-		//
-
 		cli.StringFlag{
 			Name:   "repo-owner",
 			Usage:  "repository owner",
@@ -93,6 +86,7 @@ func main() {
 			EnvVar: "DRONE_COMMIT_BRANCH",
 		},
 	}
+
 	if err := app.Run(os.Args); err != nil {
 		logrus.Fatal(err)
 	}
@@ -102,6 +96,7 @@ func run(c *cli.Context) error {
 	if c.Bool("debug") {
 		logrus.SetLevel(logrus.DebugLevel)
 	}
+
 	p := &plugin{
 		mount:    c.StringSlice("mount"),
 		path:     c.String("path"),
@@ -113,6 +108,7 @@ func run(c *cli.Context) error {
 		ttl:      time.Duration(c.Int("ttl")) * 24 * time.Hour,
 		storage:  &localCache{},
 	}
+
 	if p.file == "" {
 		p.file = path.Join(
 			c.String("repo-owner"),
@@ -120,6 +116,7 @@ func run(c *cli.Context) error {
 			c.String("commit-branch")+".tar",
 		)
 	}
+
 	if p.fallback == "" {
 		p.fallback = path.Join(
 			c.String("repo-owner"),
@@ -127,11 +124,14 @@ func run(c *cli.Context) error {
 			c.String("commit-branch")+".tar",
 		)
 	}
+
 	if !path.IsAbs(p.file) {
 		p.file = path.Join(p.path, p.file)
 	}
+
 	if !path.IsAbs(p.fallback) {
 		p.fallback = path.Join(p.path, p.fallback)
 	}
+
 	return p.Exec()
 }

@@ -3,7 +3,7 @@ package archive
 import (
 	"io"
 
-	"github.com/Sirupsen/logrus"
+	"github.com/sirupsen/logrus"
 	"github.com/drone/drone-cache-lib/archive"
 	"github.com/replicon/fast-archiver/falib"
 )
