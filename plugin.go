@@ -5,10 +5,10 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/sirupsen/logrus"
 	"github.com/drone/drone-cache-lib/archive/tar"
 	"github.com/drone/drone-cache-lib/cache"
 	"github.com/drone/drone-cache-lib/storage"
+	"github.com/sirupsen/logrus"
 )
 
 type plugin struct {
@@ -46,7 +46,7 @@ func (p *plugin) Exec() error {
 		if err := cacher.Restore(p.file, p.fallback); err == nil {
 			logrus.Info("Cache restored")
 		} else {
-			logrus.Warningf("Error restoring cache", err)
+			logrus.Warningf("Error restoring cache %v", err)
 			p.storage.Delete(p.file)
 			p.storage.Delete(p.fallback)
 		}
