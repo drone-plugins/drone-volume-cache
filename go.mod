@@ -5,7 +5,7 @@ require (
 	github.com/franela/goblin v0.0.0-20181003173013-ead4ad1d2727 // indirect
 	github.com/onsi/ginkgo v1.7.0 // indirect
 	github.com/onsi/gomega v1.4.3 // indirect
-	github.com/replicon/fast-archiver v0.0.0-20120904230621-9b24e4dcc247
+	github.com/replicon/fast-archiver v0.0.0-20190123101017-060bf9adec25
 	github.com/sirupsen/logrus v1.0.5
 	github.com/stretchr/testify v1.3.0 // indirect
 	github.com/urfave/cli v1.20.0
