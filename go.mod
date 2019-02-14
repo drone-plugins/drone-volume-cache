@@ -11,5 +11,5 @@ require (
 	github.com/urfave/cli v1.20.0
 	golang.org/x/crypto v0.0.0-20180420171155-e73bf333ef89 // indirect
 	gopkg.in/airbrake/gobrake.v2 v2.0.9 // indirect
-	gopkg.in/gemnasium/logrus-airbrake-hook.v2 v2.1.2 // indirect
+	gopkg.in/gemnasium/logrus-airbrake-hook.v3 v3.0.3 // indirect
 )
