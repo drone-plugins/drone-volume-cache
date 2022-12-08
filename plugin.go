@@ -31,7 +31,7 @@ func (p *plugin) Exec() error {
 
 	if p.rebuild {
 		dir, _ := filepath.Split(p.file)
-		os.MkdirAll(dir, 0700)
+		_ = os.MkdirAll(dir, 0700)
 
 		logrus.Infof("Rebuilding cache at %s", p.file)
 		if err := cacher.Rebuild(p.mount, p.file); err == nil {
@@ -47,8 +47,8 @@ func (p *plugin) Exec() error {
 			logrus.Info("Cache restored")
 		} else {
 			logrus.Warningf("Error restoring cache %v", err)
-			p.storage.Delete(p.file)
-			p.storage.Delete(p.fallback)
+			_ = p.storage.Delete(p.file)
+			_ = p.storage.Delete(p.fallback)
 		}
 	}
 
