@@ -43,7 +43,7 @@ func (s *localCache) List(path string) ([]storage.FileEntry, error) {
 		}
 		return nil
 	}
-	filepath.Walk(path, walker)
+	_ = filepath.Walk(path, walker)
 	return files, nil
 }
 
