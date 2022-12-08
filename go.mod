@@ -1,15 +1,19 @@
 module github.com/drone-plugins/drone-volume-cache
 
+go 1.19
+
 require (
-	github.com/drone/drone-cache-lib v0.0.0-20180416204029-5fc17dfa3c5b
-	github.com/franela/goblin v0.0.0-20181003173013-ead4ad1d2727 // indirect
-	github.com/onsi/ginkgo v1.7.0 // indirect
-	github.com/onsi/gomega v1.4.3 // indirect
-	github.com/replicon/fast-archiver v0.0.0-20120904230621-9b24e4dcc247
-	github.com/sirupsen/logrus v1.0.5
-	github.com/stretchr/testify v1.3.0 // indirect
-	github.com/urfave/cli v1.20.0
-	golang.org/x/crypto v0.0.0-20180420171155-e73bf333ef89 // indirect
-	gopkg.in/airbrake/gobrake.v2 v2.0.9 // indirect
-	gopkg.in/gemnasium/logrus-airbrake-hook.v2 v2.1.2 // indirect
+	github.com/drone/drone-cache-lib v0.0.0-20200806063744-981868645a25
+	github.com/replicon/fast-archiver v0.0.0-20121220195659-060bf9adec25
+	github.com/sirupsen/logrus v1.9.0
+	github.com/urfave/cli v1.22.10
+)
+
+require (
+	github.com/cpuguy83/go-md2man/v2 v2.0.0-20190314233015-f79a8a8ca69d // indirect
+	github.com/franela/goblin v0.0.0-20211003143422-0a4f594942bf // indirect
+	github.com/russross/blackfriday/v2 v2.0.1 // indirect
+	github.com/shurcooL/sanitized_anchor_name v1.0.0 // indirect
+	github.com/stretchr/testify v1.8.1 // indirect
+	golang.org/x/sys v0.3.0 // indirect
 )
