@@ -19,6 +19,8 @@ github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZb
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/replicon/fast-archiver v0.0.0-20120904230621-9b24e4dcc247 h1:YIFiF23EHJ/BvJjIwQnvAUHPcMZEOiEq2h53rIyZO6Y=
 github.com/replicon/fast-archiver v0.0.0-20120904230621-9b24e4dcc247/go.mod h1:R9DTtFe2IYmHTz+jzYtQmqqltTKfdZCqx4NgPIEg6oY=
+github.com/replicon/fast-archiver v0.0.0-20121220195659-060bf9adec25 h1:aq3XSz9htmdvrxpK6eBIbjs3SaN8G1D9RuKkDo4PRnw=
+github.com/replicon/fast-archiver v0.0.0-20121220195659-060bf9adec25/go.mod h1:R9DTtFe2IYmHTz+jzYtQmqqltTKfdZCqx4NgPIEg6oY=
 github.com/sirupsen/logrus v1.0.5 h1:8c8b5uO0zS4X6RPl/sd1ENwSkIc0/H2PaHxE3udaE8I=
 github.com/sirupsen/logrus v1.0.5/go.mod h1:pMByvHTf9Beacp5x1UXfOR9xyW/9antXMhjMPG0dEzc=
 github.com/stretchr/objx v0.1.0/go.mod h1:HFkY916IF+rwdDfMAkV7OtwuqBVzrE8GR6GFx+wExME=
