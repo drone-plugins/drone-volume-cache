@@ -6,5 +6,5 @@ LABEL maintainer="Drone.IO Community <drone-dev@googlegroups.com>" `
   org.label-schema.vendor="Drone.IO Community" `
   org.label-schema.schema-version="1.0"
 
-ADD release\drone-volume-cache.exe c:\drone-volume-cache.exe
+ADD release/windows/amd64/drone-volume-cache.exe c:/drone-volume-cache.exe
 ENTRYPOINT [ "c:\\drone-volume-cache.exe" ]
