@@ -8,7 +8,7 @@
 [![Go Doc](https://godoc.org/github.com/drone-plugins/drone-volume-cache?status.svg)](http://godoc.org/github.com/drone-plugins/drone-volume-cache)
 [![Go Report](https://goreportcard.com/badge/github.com/drone-plugins/drone-volume-cache)](https://goreportcard.com/report/github.com/drone-plugins/drone-volume-cache)
 
-Drone plugin that allows you to cache directories within the build workspace, this plugin is backed by Docker volumes. For the usage information and a listing of the available options please take a look at [the docs](http://plugins.drone.io/drone-plugins/drone-volume-cache/).
+Drone plugin that allows you to cache directories within the build workspace, this plugin is backed by Docker volumes. For the usage information and a listing of the available options please take a look at [the docs](https://plugins.drone.io/plugins/volume-cache).
 
 ## Build
 
