@@ -1,6 +1,6 @@
 module github.com/drone-plugins/drone-volume-cache
 
-go 1.19
+go 1.20
 
 require (
 	github.com/drone/drone-cache-lib v0.0.0-20200806063744-981868645a25
