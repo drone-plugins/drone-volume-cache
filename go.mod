@@ -7,6 +7,7 @@ require (
 	github.com/replicon/fast-archiver v0.0.0-20121220195659-060bf9adec25
 	github.com/sirupsen/logrus v1.9.3
 	github.com/urfave/cli v1.22.14
+	github.com/urfave/cli/v2 v2.27.1
 )
 
 require (
