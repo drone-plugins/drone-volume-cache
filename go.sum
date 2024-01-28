@@ -15,6 +15,8 @@ github.com/franela/goblin v0.0.0-20211003143422-0a4f594942bf/go.mod h1:VzmDKDJVZ
 github.com/konsorten/go-windows-terminal-sequences v1.0.1/go.mod h1:T0+1ngSBFLxvqU3pZ+m/2kptfBszLMUkC4ZK/EgS/cQ=
 github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZbAQM=
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
+github.com/replicon/fast-archiver v0.0.0-20120904230621-9b24e4dcc247 h1:YIFiF23EHJ/BvJjIwQnvAUHPcMZEOiEq2h53rIyZO6Y=
+github.com/replicon/fast-archiver v0.0.0-20120904230621-9b24e4dcc247/go.mod h1:R9DTtFe2IYmHTz+jzYtQmqqltTKfdZCqx4NgPIEg6oY=
 github.com/replicon/fast-archiver v0.0.0-20121220195659-060bf9adec25 h1:aq3XSz9htmdvrxpK6eBIbjs3SaN8G1D9RuKkDo4PRnw=
 github.com/replicon/fast-archiver v0.0.0-20121220195659-060bf9adec25/go.mod h1:R9DTtFe2IYmHTz+jzYtQmqqltTKfdZCqx4NgPIEg6oY=
 github.com/russross/blackfriday/v2 v2.0.1 h1:lPqVAte+HuHNfhJ/0LC98ESWRz8afy9tM/0RK8m9o+Q=
