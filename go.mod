@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/drone/drone-cache-lib v0.0.0-20200806063744-981868645a25
-	github.com/replicon/fast-archiver v0.0.0-20121220195659-060bf9adec25
+	github.com/replicon/fast-archiver v0.0.0-20120904230621-9b24e4dcc247
 	github.com/sirupsen/logrus v1.9.3
 	github.com/urfave/cli v1.22.14
 )
